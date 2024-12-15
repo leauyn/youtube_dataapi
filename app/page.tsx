@@ -21,6 +21,7 @@ export default async function Home({
 }) {
   let results: SearchResult[] = [];
   const query = searchParams.q;
+  console.log("query: ", query);
 
   if (query) {
     results = await searchVideos(query);

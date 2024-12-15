@@ -11,6 +11,7 @@ export default function SearchForm({ initialQuery = "" }) {
     event.preventDefault();
     const formData = new FormData(event.currentTarget);
     const query = formData.get("q");
+    console.log("query: ", query);
 
     startTransition(() => {
       router.push(`/?q=${encodeURIComponent(query as string)}`);
