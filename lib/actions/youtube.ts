@@ -51,6 +51,7 @@ async function fetchCaptions(videoId: string): Promise<string | null> {
 export async function searchVideos(
   searchQuery: string
 ): Promise<VideoSearchResult[]> {
+  console.log("searchQuery: ", searchQuery);
   try {
     const searchResponse = await youtube.search.list({
       key: process.env.YOUTUBE_API_KEY,
